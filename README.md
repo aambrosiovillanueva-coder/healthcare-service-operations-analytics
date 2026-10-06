@@ -21,21 +21,20 @@ Los sistemas transaccionales hospitalarios y ERPs suelen registrar eventos de se
 ## 📐 Arquitectura del Modelo Dimensional (Esquema en Estrella)
 
 Siguiendo la metodología de Ralph Kimball, el modelo desacopla transacciones de entidades maestras para garantizar granularidad atómica y máximo rendimiento del motor tabular:
-              +-------------------+
-              |      DimDate      |
-              +-------------------+
-                        | 1
-                        |
-                        | *
-+-------------------+     +-------------------------+     +-------------------+
-|   DimEquipment    |---->|   FactServiceOrders     |<----|    DimHospital    |
-+-------------------+ 1 * +-------------------------+ * 1 +-------------------+
-| *
-|
-| 1
-+-------------------+
-|   DimTechnician   |
-+-------------------+
+
+```mermaid
+graph TD
+    DimDate[📅 DimDate] -->|1 : N| FactServiceOrders[⚙️️ FactServiceOrders]
+    DimEquipment[🩺 DimEquipment] -->|1 : N| FactServiceOrders
+    DimHospital[🏥 DimHospital] -->|1 : N| FactServiceOrders
+    DimTechnician[👷 DimTechnician] -->|1 : N| FactServiceOrders
+
+    classDef fact fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#ffffff;
+    classDef dim fill:#111827,stroke:#10b981,stroke-width:1.5px,color:#ffffff;
+    
+    class FactServiceOrders fact;
+    class DimDate,DimEquipment,DimHospital,DimTechnician dim;
+```
 ### Granularidad y Diccionario de Tablas:
 * **`FactServiceOrders` (Hecho Transaccional):** Una fila por cada evento/orden de servicio completada o cancelada. Contiene claves foráneas, marcas temporales (fecha solicitud, fecha resolución) y métricas cuantitativas (`Horas_Paro`, `Costo_Mano_Obra`, `Costo_Refacciones`).
 * **`DimEquipment` (Dimensión):** Catálogo de activos (`ID_Equipo`, `Numero_Serie`, `Clase_Riesgo`, `Modalidad` [p. ej. Rayos X, Monitor, Resonancia], `Fecha_Instalacion`).
