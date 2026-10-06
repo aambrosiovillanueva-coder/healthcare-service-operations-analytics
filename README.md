@@ -65,6 +65,7 @@ VAR ResolvedOnTime =
 RETURN
 ````
 ###2. Mean Time to Repair (MTTR en Horas)
+```dax
 MTTR_Hours = 
 VAR TotalDowntimeHours = SUM(FactServiceOrders[Horas_Paro_Equipo])
 VAR TotalCorrectiveOrders = 
@@ -74,17 +75,20 @@ VAR TotalCorrectiveOrders =
     )
 RETURN
     DIVIDE(TotalDowntimeHours, TotalCorrectiveOrders, BLANK())
+```
 🗂️ Estructura del Repositorio:
+```text
 ├── data/
-│   ├── raw/                 # Esquemas y datos sintéticos normalizados
-│   └── data_dictionary.md   # Definición formal de atributos y campos
+│   ├── raw/                             # Esquemas y datos sintéticos normalizados
+│   └── data_dictionary.md               # Definición formal de atributos y campos
 ├── src/
-│   ├── sql/                 # Consultas de extracción, agregación y validación
-│   └── powerquery/          # Scripts M para tipado y profiling de fuentes
+│   ├── sql/                             # Consultas de extracción, agregación y validación
+│   └── powerquery/                      # Scripts M para tipado y profiling de fuentes
 ├── reports/
 │   └── clinical_service_dashboard.pbit  # Plantilla de reporte Power BI
 └── docs/
-    └── screenshots/         # Vistas del modelo estrella y dashboard final
+    └── screenshots/                     # Vistas del modelo estrella y dashboard final
+```
 
     
   
