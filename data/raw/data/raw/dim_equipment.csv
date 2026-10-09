@@ -1,0 +1,11 @@
+id_equipo,numero_serie,nombre_equipo,modalidad,marca,modelo,clase_riesgo
+101,SN-TC-8841,Tomografo Revolution 128,Tomografia,GE Healthcare,Revolution EVO,Clase III - Soporte de Vida
+102,SN-TC-9920,Tomografo Somatom Force,Tomografia,Siemens Healthineers,Somatom Force,Clase III - Soporte de Vida
+103,SN-RM-3312,Resonancia Magnetica 1.5T,Resonancia Magnetica,Philips,Ingenia Ambition,Clase II
+104,SN-RM-4418,Resonancia Magnetica 3.0T,Resonancia Magnetica,Siemens Healthineers,Magnetom Vida,Clase II
+105,SN-VP-5501,Ventilador Pulmonar Cuidados Intensivos,Ventilador Pulmonar,Hamilton Medical,Hamilton G5,Clase III - Soporte de Vida
+106,SN-VP-5502,Ventilador Pulmonar Cuidados Intensivos,Ventilador Pulmonar,Hamilton Medical,Hamilton G5,Clase III - Soporte de Vida
+107,SN-VP-7714,Ventilador Mecanico Adulto/Pediatrico,Ventilador Pulmonar,Getinge,Servo-u,Clase III - Soporte de Vida
+108,SN-MG-2201,Mastografo Digital con Tomosintesis,Mastografia,Hologic,Dimensions 3D,Clase II
+109,SN-MG-2202,Mastografo Digital Senographe,Mastografia,GE Healthcare,Senographe Pristina,Clase II
+110,SN-MS-1105,Monitor de Signos Vitales Modular,Monitor de Signos Vitales,Mindray,BeneVision N17,Clase III - Soporte de Vida
