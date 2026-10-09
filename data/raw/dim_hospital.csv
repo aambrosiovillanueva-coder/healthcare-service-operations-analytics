@@ -1,0 +1,8 @@
+id_hospital,nombre_hospital,ciudad,estado,nivel_atencion,tipo_institucion
+1,Hospital Angeles Lomas,Huixquilucan,Estado de Mexico,Tercer Nivel,Privado
+2,Centro Medico ABC Observatorio,Ciudad de Mexico,CDMX,Tercer Nivel,Privado
+3,Hospital Medica Sur,Ciudad de Mexico,CDMX,Tercer Nivel,Privado
+4,Hospital Zambrano Hellion,San Pedro Garza Garcia,Nuevo Leon,Tercer Nivel,Privado
+5,Hospital San Javier,Guadalajara,Jalisco,Segundo Nivel,Privado
+6,Hospital General de Mexico,Ciudad de Mexico,CDMX,Tercer Nivel,Publico
+
